@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>TextPad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+<body style="max-width:600px">
+
+<nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+<div class="w3-container w3-theme-d2">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <img class="w3-circle" src="icon.png" alt="avatar" style="width:75%">
+    <h1>SVictorio</h1>
+</div>
+</div>
+
+<button class="button1" id="btnSave" onclick="saveData()">Save</button>
+<br>
+<button class="button2" onclick="localStorage.setItem('sanje','');showLS()">Clear</button>
+<br>
+<button class="button3" onclick="showLS()">Refresh</button></div>
+<p style="clear:both"><br></p>
+</nav>
+<style>
+  
+.header {background-color: #00EE76;
+  padding: 50px 80px;
+  height: 50px;
+  width :100%;
+  color: white;
+  text-align: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+  padding: 5px 79px;
+    background-color: white; 
+    color: black; 
+    border: 5px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.button2 {
+ padding: 5px 77px;
+    background-color: white; 
+    color: black; 
+    border: 5px solid #4CAF50;
+}
+
+.button2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button3 {
+  padding: 5px 69px;
+    background-color: white; 
+    color: black; 
+    border: 5px solid #4CAF50;
+}
+
+.button3:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+</style>
+
+
+
+<div class="header">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+</div>
+<textarea wrap="virtual" placeholder="Enter a Text.." id="sanje" rows="26" cols="44" ></textarea> 
+
+
+<script>
+closeSidebar();
+function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+
+
+function saveData(){
+  var victorio = localStorage.getItem('sanje'), 
+      arr = [];
+  if (!victorio) { victorio = ''; }  
+  arr = victorio.split(',');
+
+  arr.push(document.getElementById("sanje").value);
+  victorio = arr.join(' ');
+  localStorage.setItem("sanje", victorio);
+}
+
+function showLS() {
+  var ls = localStorage.getItem('sanje');
+  document.getElementById('sanje').innerHTML =""+ls.substr(1);
+}
+</script>
+
+</body>
+</html>

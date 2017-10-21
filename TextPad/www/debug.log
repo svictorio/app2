@@ -1,0 +1,6 @@
+[1021/101730.874:ERROR:file_io.cc(89)] ReadExactly: expected 224, observed 0
+[1021/101730.889:ERROR:crash_report_database_win.cc(444)] failed to read records
+[1021/170244.469:ERROR:file_io.cc(89)] ReadExactly: expected 224, observed 0
+[1021/170244.469:ERROR:crash_report_database_win.cc(444)] failed to read records
+[1021/172227.494:ERROR:file_io.cc(89)] ReadExactly: expected 224, observed 0
+[1021/172227.494:ERROR:crash_report_database_win.cc(444)] failed to read records
