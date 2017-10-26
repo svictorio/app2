@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>TextPad</title>
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
-<body style="max-width:600px">
+<body>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
 <div class="w3-container w3-theme-d2">
   <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
-  <br>
-  <div class="w3-padding w3-center">
-    <img class="w3-circle" src="icon.png" alt="avatar" style="width:75%">
-    <h1>SVictorio</h1>
-</div>
+  <br><br>
 </div>
 
 <button class="button1" id="btnSave" onclick="saveData()">Save</button>
@@ -22,16 +18,9 @@
 <br>
 <button class="button3" onclick="showLS()">Refresh</button></div>
 <p style="clear:both"><br></p>
+
 </nav>
 <style>
-  
-.header {background-color: #00EE76;
-  padding: 50px 80px;
-  height: 50px;
-  width :100%;
-  color: white;
-  text-align: center;
-}
 
 .button {
     background-color: #4CAF50; /* Green */
@@ -88,12 +77,25 @@
 
 
 
-<div class="header">
+
+
+
+
+<header class="w3-top w3-bar w3-theme">
   <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
-</div>
-<textarea wrap="virtual" placeholder="Enter a Text.." id="sanje" rows="26" cols="44" ></textarea> 
+  <h1 class="w3-bar-item">TextPad</h1>
+</header>
+
+<div class="w3-container" style="margin-top:90px">
+<hr>
+<div class="w3-cell-row">
+ 
+ 
 
 
+<textarea wrap="virtual" placeholder="Enter a Text.." id="sanje" rows="20" cols="40" ></textarea> 
+
+ </div>
 <script>
 closeSidebar();
 function openSidebar() {
@@ -102,7 +104,6 @@ function openSidebar() {
 function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
-
 
 
 function saveData(){
@@ -123,4 +124,3 @@ function showLS() {
 </script>
 
 </body>
-</html>
