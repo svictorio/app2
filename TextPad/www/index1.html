@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>TextPad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
@@ -96,31 +96,6 @@
 <textarea wrap="virtual" placeholder="Enter a Text.." id="sanje" rows="20" cols="40" ></textarea> 
 
  </div>
-<script>
-closeSidebar();
-function openSidebar() {
-    document.getElementById("mySidebar").style.display = "block";
-}
-function closeSidebar() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-
-
-function saveData(){
-  var victorio = localStorage.getItem('sanje'), 
-      arr = [];
-  if (!victorio) { victorio = ''; }  
-  arr = victorio.split(',');
-
-  arr.push(document.getElementById("sanje").value);
-  victorio = arr.join(' ');
-  localStorage.setItem("sanje", victorio);
-}
-
-function showLS() {
-  var ls = localStorage.getItem('sanje');
-  document.getElementById('sanje').innerHTML =""+ls.substr(1);
-}
-</script>
+<script src="Myscript.js"></script>
 
 </body>
